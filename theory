@@ -73,6 +73,16 @@ cookies: dictionary object holding Cookie names and values
 files  data pertaining to uploaded file.
 method : current request method.
 
+flask cookies:  A cookie   is  stored on clients  computer  in the form  of a text  file. Its purpose is to
+remember  and  track data  pertaining  to a client's usage  for better visitor  experience and  site statistics
+
+
+
+A request Object:
+contains cookies attributes .
+dictonary  object  of all  the cookie variables and there corresponding values , a client  has transmitted .In addition
+to it , a cookie  also stores  its expiry date
+
 
 
 

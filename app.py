@@ -1,4 +1,4 @@
-from flask import Flask,redirect, url_for, request, render_template
+from flask import Flask,redirect, url_for, request, render_template,make_response
 
 app=Flask(__name__)
 
@@ -31,6 +31,25 @@ def result():
       result = request.form
       return render_template("result.html",result = result)
 
+
+@app.route('/setcookie', methods=['POST','GET'])
+def setcookie():
+    if request.method == 'POST':
+        user=request.form['nm']
+        print(user)
+
+        resp = make_response(render_template('readcookie.html'))
+
+        resp.set_cookie('userID',user)
+
+        return resp
+
+
+
+@app.route('/getcookie')
+def getcookie():
+    user=request.cookies.get('userID')
+    return '<h1>welcome  '+user+'</h1>'
 
 
 
