@@ -33,3 +33,16 @@ In the following example, the rule parameter of route() decorator contains <name
 url building
 the url_for() function  is very  usefull  for dynamically  building  a url  for  specific function. The function  accepts the name  of a function as
 first argument, and  one or more keyword arguments , each corresponding  to the  variable  part of Url
+
+Flask – HTTP methods
+http protocol  is the foundation  of data communication in world   wide  web . Different  methods  of data  retrival  from  specified  url are defined in this
+protocol
+
+Get :::---sends data  in unencrypted  form to the server , Most  common method
+Head:::-same as a get but  without response body
+
+
+Post::--Used to send  Html form data to server . Data  reccieved  by Post method is not  cached  by server
+Put ::-- Replace  all current  representation  of the target  resource  with the  uploaded content
+delete::::---delete
+
