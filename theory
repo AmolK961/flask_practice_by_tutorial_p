@@ -46,3 +46,12 @@ Post::--Used to send  Html form data to server . Data  reccieved  by Post method
 Put ::-- Replace  all current  representation  of the target  resource  with the  uploaded content
 delete::::---delete
 
+
+flask templates
+
+flask uses  jinja tempate engine
+{% ..... %}  for statements
+{{  ....}} for expressions  to print  to the  template output
+{# .. #} for comment  not included  in the  template Output
+#....## for line statements
+

@@ -11,6 +11,18 @@ def hellow():
 def hello_name(name):
    return 'Hello %s!' % name
 
+@app.route('/hello/<int:score>')
+def hello_score(score):
+   return  render_template('Hello.html', marks=score)
+
+
+@app.route('/result')
+def result():
+    dict={'phy':50,'che':60,'maths':67}
+    return render_template('result.html',result= dict)
+
+
+
 
 
 # converts int accepts integer  float  for flpating point values  path accepts  slashes  used as  directory  seprater decorator
