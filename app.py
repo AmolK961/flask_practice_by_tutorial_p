@@ -7,6 +7,15 @@ app=Flask(__name__)
 def hellow():
     return render_template('login.html')
 
+@app.route('/index')
+def index():
+    return  render_template('index.html')
+
+
+@app.route('/student')
+def student():
+   return render_template('student.html')
+
 @app.route('/hello/<name>')
 def hello_name(name):
    return 'Hello %s!' % name
@@ -16,10 +25,11 @@ def hello_score(score):
    return  render_template('Hello.html', marks=score)
 
 
-@app.route('/result')
+@app.route('/result',methods=['POST', 'GET'])
 def result():
-    dict={'phy':50,'che':60,'maths':67}
-    return render_template('result.html',result= dict)
+   if request.method == 'POST':
+      result = request.form
+      return render_template("result.html",result = result)
 
 
 
